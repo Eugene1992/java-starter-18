@@ -62,6 +62,10 @@ public class Test {
         x1 = x1 - y1;
         System.out.println("10) "+"x1="+x1+" "+"y1="+y1);
 
+        int k = 13;
+
+        System.out.println( Long.toBinaryString(k));
+        System.out.println("int c = "+"13");
 
 
 
