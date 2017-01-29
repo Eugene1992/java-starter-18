@@ -66,6 +66,8 @@ public class hw_2 {
 
         int k = 13;
 
+
+//11
         System.out.println( Long.toBinaryString(k));
         System.out.println("int c = "+"13");
 
