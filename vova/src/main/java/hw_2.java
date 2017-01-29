@@ -1,7 +1,10 @@
-public class Test {
+/**
+ * Created by Vladimir on 29.01.2017.
+ */
+public class hw_2 {
     public static void main(String[] args) {
 
-                                          //дз
+        //дз
 
         //1)Создать четыре целочисленные переменные типов byte, short, int, long
         byte a;
