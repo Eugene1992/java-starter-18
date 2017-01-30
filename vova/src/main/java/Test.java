@@ -68,7 +68,9 @@ public class Test {
 
         System.out.println();
 
-
+//        int a = 0, b;
+//        a = a + b;
+//        System.out.print(a);
 
 
 
