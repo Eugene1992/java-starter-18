@@ -1,6 +1,6 @@
 
 public class hw02_10 {
-    private static void main(String[] args){
+    public static void main(String[] args){
         byte a = 21;                      // 1)
         short b = 23345;
         int c = 1232133122;
@@ -28,7 +28,7 @@ public class hw02_10 {
         c3 = c4;
 
         int c5 = 324, c6 = 645675;        // 10)
-        c5 +=c6;
+        c5 += c6;
         c6 = c5 - c6;
         c5 = c5 - c6;
     }

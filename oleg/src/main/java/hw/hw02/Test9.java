@@ -5,11 +5,9 @@ public class Test9 {
         int a = 50;
         int b = 100;
         int c = 10;
-        a = a+c;
-
+        a = a + c;
 
         System.out.println(a);
         System.out.println(b);
-
     }
 }

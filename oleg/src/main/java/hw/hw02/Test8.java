@@ -6,8 +6,7 @@ public class Test8 {
         byte b = 20;
         short c = 200;
         short d = 220;
-        int s = ((b/a) * (d/c));
-
+        int s = ((b / a) * (d / c));
 
         System.out.print(s);
     }
