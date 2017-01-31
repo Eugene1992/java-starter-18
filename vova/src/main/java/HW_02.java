@@ -1,7 +1,5 @@
-/**
- * Created by Vladimir on 29.01.2017.
- */
-public class hw_2 {
+
+public class HW_02 {
     public static void main(String[] args) {
 
         //дз
