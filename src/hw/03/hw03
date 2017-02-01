@@ -22,7 +22,7 @@ int secondNumber = scan.nextInt();
 Задание 1
 Выучите основные конструкции  и понятия, рассмотренные на уроке.
 Внимательно прочитайте эти статьи:
-http://www.znannya.org/?view=Java_DataTypes
+http://www.znannya.org/?view=Java_DataTypes  // у меня не открывается
 http://www.znannya.org/?view=Java_PrimitiveTypes
 http://www.znannya.org/?view=Java_PrimitiveTypesOp
 
