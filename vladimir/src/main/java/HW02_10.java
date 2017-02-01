@@ -1,5 +1,5 @@
 
-public class hw02_10 {
+public class HW02_10 {
     public static void main(String[] args){
         byte a = 21;                      // 1)
         short b = 23345;
