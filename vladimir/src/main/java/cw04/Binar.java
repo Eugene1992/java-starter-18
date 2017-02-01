@@ -6,12 +6,11 @@ public class Binar {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int a = scan.nextInt(), b;
-        String c = "";
+        String res = "";
         while (a != 1) {
-            b = a % 2;
-            c = b + c;
+            res = a % 2 + res;
             a /= 2;
         }
-        System.out.println(c);
+        System.out.println(res);
     }
 }
