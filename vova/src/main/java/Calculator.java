@@ -22,9 +22,7 @@ public class Calculator {
         System.out.println("введите число и нажмите кнопку Enter");
         double secondnum = scan.nextDouble();
 
-
-
-        switch (symbol){
+        switch (symbol) {
             case "+":
                 System.out.println(firstnum + secondnum);
                 break;
@@ -36,7 +34,7 @@ public class Calculator {
                 break;
             case "/":
                 System.out.println(firstnum / secondnum);
-                if (secondnum==0){
+                if (secondnum == 0) {
                     System.out.println("Ошибка, попытка делить на ноль");
                     break;
                 }

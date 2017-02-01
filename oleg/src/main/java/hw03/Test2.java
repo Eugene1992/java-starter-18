@@ -7,8 +7,8 @@ public class Test2 {
 
         Scanner scanner = new Scanner(System.in);
 
-            System.out.println ("Хотите узнать, какое из двух чисел ближе к 10?");
-            System.out.println ("Введите 2 любых числа");
+        System.out.println("Хотите узнать, какое из двух чисел ближе к 10?");
+        System.out.println("Введите 2 любых числа");
 
         int a = scanner.nextInt();
         int b = scanner.nextInt();

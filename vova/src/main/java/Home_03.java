@@ -9,7 +9,6 @@ public class Home_03 {
 //        Создать программу, проверяющую и сообщающую на экран, является ли введенное с
 //        консоли целое число, чётным либо нечётным.
 
-
         int number = scan.nextInt();
         if (number % 2 == 0) {
             System.out.println(" Введеное число четное ");
@@ -17,7 +16,7 @@ public class Home_03 {
             System.out.println(" Введенное число нечетное ");
         }
 
-                           // 2.2
+        // 2.2
         int number1 = scan.nextInt();
         System.out.println(number1 % 2 == 0 ? "Введенное число четное" : " Введенное число нечетное ");
 
@@ -29,14 +28,12 @@ public class Home_03 {
         float number2 = scan.nextFloat();
         float number3 = scan.nextFloat();
 
-        if(Math.abs(ten - number2)> Math.abs(ten - number3)) {
+        if (Math.abs(ten - number2) > Math.abs(ten - number3)) {
             System.out.println(" Число " + number3 + " ближе к 10 чем " + number2);
-        }
-             else if (Math.abs(ten - number2)< Math.abs(ten - number3)){
-                System.out.println("Число " + number2 + " ближе к 10 чем " + number3);
-        }
-        else  if  (Math.abs(ten - number2) == (Math.abs(ten - number3))) {
-            System.out.println(" Числа " + number2 + " и " + number3 + " одинаково близки к 10"  );
+        } else if (Math.abs(ten - number2) < Math.abs(ten - number3)) {
+            System.out.println("Число " + number2 + " ближе к 10 чем " + number3);
+        } else if (Math.abs(ten - number2) == (Math.abs(ten - number3))) {
+            System.out.println(" Числа " + number2 + " и " + number3 + " одинаково близки к 10");
         }
 
 //        Задание 4
@@ -67,16 +64,13 @@ public class Home_03 {
         int num8 = scan.nextInt();
         int num9 = scan.nextInt();
         int num10 = scan.nextInt();
-        if((num7>num8) && (num7>num9) && (num7<num10)){
+        if ((num7 > num8) && (num7 > num9) && (num7 < num10)) {
             System.out.println(num7);
-        }
-        else if((num8>num7) && (num8>num9) && (num8<num10)){
+        } else if ((num8 > num7) && (num8 > num9) && (num8 < num10)) {
             System.out.println(num8);
-        }
-        else if((num9>num7) && (num9>num8) && (num9<num10)){
+        } else if ((num9 > num7) && (num9 > num8) && (num9 < num10)) {
             System.out.println(num9);
-        }
-        else{
+        } else {
             System.out.println(num10);
         }
 
@@ -89,23 +83,18 @@ public class Home_03 {
         double b = scan.nextFloat();
         double c = scan.nextFloat();
 
-        double D = b*b - (4*a*c);
+        final double D = b * b - (4 * a * c);
 
-        if(D < 0){
+        if (D < 0) {
             System.out.println("Квадратное уравнение не имеет корней");
+        } else if (D == 0) {
+            double x = -b / 2 * a;
+            System.out.println(" x " + x);
+        } else {
+            double x1 = (-b + (Math.sqrt(D))) / (2 * a);
+            double x2 = (-b - (Math.sqrt(D))) / (2 * a);
+            System.out.println("x1 = " + x1 + " x2 = " + x2);
         }
-        else if(D==0){
-            double x = -b/2*a;
-            System.out.println(" x "+x);
-        }
-         else  {
-            double x1 = (-b + (Math.sqrt(D)))/(2*a);
-            double x2 = (-b - (Math.sqrt(D)))/(2*a);
-            System.out.println("x1 = "+x1+" x2 = "+x2);
-        }
-
-
-
     }
 }
 
