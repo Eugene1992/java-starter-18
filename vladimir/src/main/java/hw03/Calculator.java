@@ -1,6 +1,5 @@
 package hw03;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Calculator {
