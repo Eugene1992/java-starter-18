@@ -9,15 +9,19 @@ public class Factorial {
         System.out.println("Tapez un chiffre: ");
 
         int num1 = scan.nextInt();
-        int num2 = num1 - 1;
+        /*int num2 = num1 - 1;
         int result = num1 * num2;
         for (; num2 > 2; num1--) {
             num1 = result;
             num2 -= 1;
             result = num1 * num2;
 
+        }*/
+        int sum = 1;
+        while (num1 > 0) {
+            sum = sum * num1--;
         }
-        System.out.println(result);
+        System.out.println(sum);
     }
 
 }

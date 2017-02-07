@@ -2,10 +2,8 @@ package HW_03;
 
 import java.util.Scanner;
 
-public class Test1
-{
-    public static void main(String[] args)
-    {
+public class Test1 {
+    public static void main(String[] args) {
         System.out.println("Input any  2 number ");
 
         Scanner scan = new Scanner(System.in);
@@ -14,7 +12,7 @@ public class Test1
         double num2 = scan.nextDouble();
         double num3 = scan.nextDouble();
 
-         if (Math.abs(num1 - num2) > Math.abs(num1 - num3)) {
+        if (Math.abs(num1 - num2) > Math.abs(num1 - num3)) {
             System.out.println(" Число " + num3 + " ближе к 10 чем " + num2);
         } else if (Math.abs(num1 - num2) < Math.abs(num1 - num3)) {
             System.out.println("Число " + num2 + " ближе к 10 чем " + num3);

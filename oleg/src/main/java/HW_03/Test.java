@@ -15,7 +15,7 @@ public class Test {
         while (num1 < num2) {
             num1++;
             summe = summe + num1;
-                    }
+        }
         System.out.println(summe);
     }
 }

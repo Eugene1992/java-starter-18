@@ -38,22 +38,22 @@ public class HomeWork {
 
 //        }
         //4.1
-//        for(int a = 2; a<Math.pow(2,21); a*=2 ){
-//            System.out.print(a + " ");
-//        }
+        for (int a = 2; a < Math.pow(2, 21); a *= 2) {
+            System.out.print(a + " ");
+        }
         //4.2
-//        int a = 2;
-//        while (a < Math.pow(2,21)){
-//            System.out.print(a + " ");
-//            a*=2;
-//        }
+        int a = 2;
+        while (a < Math.pow(2, 21)) {
+            System.out.print(a + " ");
+            a *= 2;
+        }
 
         //5.1
 
 //      *  5. Выведите на экран первые 20 членов последовательности Фибоначчи.
 
 //        int members = 18;
-//        int firstMember = 0;
+//        int firstMember = 1;
 //        int secondMember = 1;
 ////        int currentValue = firstMember;
 //        System.out.println(firstMember);
@@ -63,7 +63,6 @@ public class HomeWork {
 //            System.out.println(result);
 //            firstMember = secondMember;
 //            secondMember = result;
-//
 //        }
         /**
          *  6. Написать программу, которая реализует следующий функционал:
@@ -75,50 +74,32 @@ public class HomeWork {
          *6.3 Пользователь выбирает один из предложенных вариантов, программа выполняет соответствующий перевод числа и выводит
          на экран результат.
          */
-//        Scanner scan = new Scanner(System.in);
-//        System.out.println("Введите число");
-//        int value = scan.nextInt();
-//        System.out.println("Вы можете перевести число в одну из систем счисления: \n 1) в 2-ую \n 2) в 8-ую \n 3) в 16-ую");
-//        int value2 = scan.nextInt();
-//        switch (value2) {
-//            case 1:
-//                int f11 = value % 2;
-//                value = value / 2;
-//                int f21 = value % 2;
-//                value = value / 2;
-//                int f31 = value % 2;
-//                value = value / 2;
-//                int f41 = value % 2;
-//                value = value / 2;
-//                int f51 = value % 2;
-//                value = value / 2;
-//                int f61 = value % 2;
-//                value = value / 2;
-//                int f71 = value % 2;
-//                value = value / 2;
-//                int f81 = value % 2;
-//
-//                System.out.println(f81 + "" + f71 + "" + f61 + "" + f51 + " " + f41 + "" + f31 + "" + f21 + "" + f11);
-//                System.out.println(value);
-//
-//                break;
-//
-//            case 2:
-//                int first = 259;
-//                int second = 259 / 8;
-//                int result = first % 8;
-//                System.out.print(result);
-//                for (; second > 0; second /= 8) {
-//                    first = second;
-//                    System.out.print((second) % 8);
-//                    break;
-//
-//                    case 3:
+        /*Scanner scan = new Scanner(System.in);
+        System.out.println("Введите число");
+        int value = scan.nextInt();
+        System.out.println("Вы можете перевести число в одну из систем счисления: \n 1) в 2-ую \n 2) в 8-ую \n 3) в 16-ую");
+        int value2 = scan.nextInt();
+        String res = "";
+        switch (value2) {
+            case 1:
+                while (value > 0) {
+                    res = value % 2 + res;
+                    value /= 2;
+                }
+                *//*for (; value > 0; value /= 2) {
+                    res = value % 2 + res;
+                }*//*
+                System.out.println(res);
+                break;
 
-
-//                }
-
-//        }
+            case 2:
+                while (value > 0) {
+                    res = value % 8 + res;
+                    value /= 8;
+                }
+                System.out.println(res);
+                break;
+        }*/
 
 //       * 7. Создайте программу, вычисляющую факториал натурального числа n, введенного пользователем.
 

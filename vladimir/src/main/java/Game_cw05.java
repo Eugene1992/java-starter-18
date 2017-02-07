@@ -13,7 +13,7 @@ public class Game_cw05 {
                 if (exit.matches("[0-9]*")) {
                     int n = Integer.parseInt(exit);
                     Random rand = new Random();
-                    int r = rand.nextInt(10);
+                    int r = rand.nextInt(5);
                     if (n == r) {
                         System.out.println("You win!");
                         i++;
