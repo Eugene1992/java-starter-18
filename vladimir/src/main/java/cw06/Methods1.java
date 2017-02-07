@@ -8,13 +8,15 @@ public class Methods1 {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter string");
         String str = scan.nextLine();
-        printStr(str);
+        System.out.println("Enter number of strings");
+        int n = scan.nextInt();
+        printStr(str, n);
     }
 
 
-    static void printStr(String str) {
-        for (int i = 1; i <= 5; i++) {
-            System.out.printf("%s number = %d\n",str,i);
+    static void printStr(String str, int n) {
+        for (int i = 1; i <= n; i++) {
+            System.out.printf("%s number = %d\n", str, i);
 
         }
     }
