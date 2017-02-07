@@ -13,7 +13,7 @@ public class Methods1 {
 
 
     static void printStr(int n) {
-        for (int i = 0; i < n; i++) {
+        for (int i = 1; i <= n; i++) {
             System.out.println("Hello world number = " + i);
 
         }
