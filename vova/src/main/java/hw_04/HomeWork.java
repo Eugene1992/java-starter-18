@@ -104,14 +104,13 @@ public class HomeWork {
 //                break;
 //
 //            case 2:
-//                int first = 259;
-//                int second = 259 / 8;
-//                int result = first % 8;
-//                System.out.print(result);
-//                for (; second > 0; second /= 8) {
-//                    first = second;
-//                    System.out.print((second) % 8);
-//                    break;
+//        int first = 259;
+//        String second = "";
+//        for (; first > 0; first /= 8) {
+//
+//            second = first % 8 + second;
+//        }
+//        System.out.print(second);
 //
 //                    case 3:
 
@@ -152,6 +151,9 @@ public class HomeWork {
 //
 //                }
 //        }
+
+
+
     }
 }
 
