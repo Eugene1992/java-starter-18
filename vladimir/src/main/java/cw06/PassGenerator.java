@@ -16,8 +16,8 @@ public class PassGenerator {
 
     static String pass(int length) {
         String pass = "", a = "";
+        Random rand = new Random();
         for (int i = 0; i < length; i++) {
-            Random rand = new Random();
             int r = rand.nextInt(100);
             if (r < 50) {
                 a = String.valueOf(rand.nextInt(9));

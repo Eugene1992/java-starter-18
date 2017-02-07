@@ -12,13 +12,13 @@ public class CountInterval {
         int b = scan.nextInt();
         System.out.println("Enter step");
         int step = scan.nextInt();
-        System.out.println("Sum = " + summary(a,b,step));
+        System.out.println("Sum = " + summary(a, b, step));
 
     }
 
-    static  int summary (int a, int b, int step){
+    static int summary(int a, int b, int step) {
         int sum = 0;
-        for (; a <=b; a+=step) {
+        for (; a <= b; a += step) {
             sum += a;
         }
         return sum;
