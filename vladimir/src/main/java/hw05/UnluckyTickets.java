@@ -13,7 +13,7 @@ public class UnluckyTickets {
             if (number1 == 13 || number2 == 13 || number3 == 13 ||
                     number4 == 13 || number5 == 13) {
                 n++;
-                //System.out.println(i);
+                System.out.println(i);
             }
         }
         System.out.print("Number of unlucky tickets = " + n);

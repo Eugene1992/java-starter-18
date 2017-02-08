@@ -13,7 +13,7 @@ public class LuckyTickets {
             int number6 = i % 10;
             if (number1 + number2 + number3 == number4 + number5 + number6) {
                 n++;
-                //System.out.print(i + " ");
+                System.out.print(i + " ");
             }
         }
         System.out.print("Number of lucky tickets = " + n);
