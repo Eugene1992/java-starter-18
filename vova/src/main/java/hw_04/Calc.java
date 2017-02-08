@@ -28,8 +28,8 @@ public class Calc {
             case 3: {
                 String sys = "";
                 for (; value > 0; value /= 15) {
-//                    int numb = value % 15;
-//                    if (value <= 15) {
+                    int numb = value % 15;
+                    if (value <= 15) {
 
                         if (value == 10) {
                             System.out.println("A");
@@ -59,12 +59,10 @@ public class Calc {
 
                         System.out.println(sys);
                     }
-
                 }
-
             }
-
         }
     }
-//}
+}
+
 
