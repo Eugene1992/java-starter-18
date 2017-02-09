@@ -26,14 +26,11 @@ public class ArrayToString {
     }
 
     static String arrayToString(int[] arr){
-        String res = "";
+        String res = "[";
         for (int i = 0; i < arr.length; i++) {
-            if(i != arr.length - 1){
-                res = res + arr[i] + ", ";
-            }else{
-                res = res + arr[i];
-            }
+            String separator = i != arr.length - 1 ? ", " : "";
+            res = res + arr[i] + separator;
         }
-        return res;
+        return res + "]";
     }
 }

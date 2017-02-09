@@ -8,7 +8,6 @@ public class Array10 {
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter length of array");
         int l = scan.nextInt();
-        int val;
         int[] arr = new int[l];
         arrayInput(l, arr);
         int op = 0, exit = 0;
