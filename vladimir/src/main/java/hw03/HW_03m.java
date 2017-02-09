@@ -5,6 +5,8 @@ import java.util.Scanner;
 
 public class HW_03m {
     public static void main(String[] args) {
+        //// TODO: 09.02.2017 Refactor repetitve code in some methods
+
         Scanner scan = new Scanner(System.in);
         int exit;
         do {
@@ -43,7 +45,14 @@ public class HW_03m {
                     double num1 = scan.nextDouble();
                     System.out.println("Enter second number");
                     double num2 = scan.nextDouble();
-                    closerTo10(num1, num2);
+                    int res = closerTo10(num1, num2);
+                    if (res == 0) {
+                        System.out.println("The numbers are equal");
+                    }
+                    if (res == 1) {
+                        System.out.printf("The %f is closer to 10 then %f", num1, num2);
+                    }
+                    System.out.printf("The %f is closer to 10 then %f", num2, num1);
                     exit = 1;
                     break;
                 }
@@ -54,7 +63,7 @@ public class HW_03m {
                     double n2 = scan.nextDouble();
                     System.out.println("Enter third number");
                     double n3 = scan.nextDouble();
-                    largeNumberOf3(n1, n2, n3);
+                    System.out.printf("The second largest number is %f", largeNumberOf3(n1, n2, n3));
                     exit = 1;
                     break;
                 }
@@ -67,7 +76,7 @@ public class HW_03m {
                     double n6 = scan.nextDouble();
                     System.out.println("Enter fourth number");
                     double n7 = scan.nextDouble();
-                    secondLargeOf4(n4, n5, n6, n7);
+                    System.out.printf("The second largest number is %f", secondLargeOf4(n4, n5, n6, n7));
                     exit = 1;
                     break;
                 }
@@ -144,30 +153,37 @@ public class HW_03m {
         else System.out.println("The number is odd");
     }
 
-    static void closerTo10(double num1, double num2) {
+    static int closerTo10(double num1, double num2) {
+        int res = 0;
         if (Math.abs(10 - num1) == Math.abs(10 - num2))
-            System.out.println("The numbers are equal");
+            res = 0;
         else if (Math.abs(10 - num1) < Math.abs(10 - num2))
-            System.out.printf("The %f is closer to 10 then %f", num1, num2);
-        else System.out.printf("The %f is closer to 10 then %f", num2, num1);
+            res = 1;
+
+        else res = 2;
+        return res;
     }
 
-    static void largeNumberOf3(double n1, double n2, double n3) {
+    static double largeNumberOf3(double n1, double n2, double n3) {
+        double num = 0;
         if (n1 > n2 && n1 > n3)
-            System.out.printf("The %f is the largest number\n\n", n1);
+            num = n1;
         else if (n2 > n1 && n2 > n3)
-            System.out.printf("The %f is the largest number", n2);
-        else System.out.printf("The %f is the largest number", n3);
+            num = n2;
+        else num = n3;
+        return num;
     }
 
-    static void secondLargeOf4(double n4, double n5, double n6, double n7) {
+    static double secondLargeOf4(double n4, double n5, double n6, double n7) {
+        double num = 0;
         if (n4 > n5 && n4 > n6 && n4 < n7)
-            System.out.printf("The second largest number is %f", n4);
+            num = n4;
         else if (n5 > n4 && n5 > n6 && n5 < n7)
-            System.out.printf("The second largest number is %f", n4);
+            num = n5;
         else if (n6 > n4 && n6 > n5 && n6 < n7)
-            System.out.printf("The second largest number is %f", n4);
-        else System.out.printf("The second largest number is %f", n7);
+            num = n6;
+        else num = n7;
+        return num;
     }
 
     static void quadratic(double a, double b, double c) {
