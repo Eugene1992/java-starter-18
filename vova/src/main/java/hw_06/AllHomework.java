@@ -5,11 +5,11 @@ import java.util.Scanner;
 
 public class AllHomework {
     public static void main(String[] args) {
-        homeWork_04_01();
+
 
     }
 
-    static void homeWork_03_01() {
+    static void parityСalculator() {
         Scanner scan = new Scanner(System.in);
         int number = scan.nextInt();
         if (number % 2 == 0) {
@@ -19,7 +19,7 @@ public class AllHomework {
         }
     }
 
-    static void homeWork_03_03() {
+    static void nearestNumber() {
         Scanner scan = new Scanner(System.in);
         float ten = 10f;
         float number2 = scan.nextFloat();
@@ -34,7 +34,7 @@ public class AllHomework {
         }
     }
 
-    static void homeWork_03_04() {
+    static void maxValue() {
         Scanner scan = new Scanner(System.in);
         int num4 = scan.nextInt();
         int num5 = scan.nextInt();
@@ -53,7 +53,7 @@ public class AllHomework {
         }
     }
 
-    static void homeWork_03_05() {
+    static void secondLargest() {
         Scanner scan = new Scanner(System.in);
         int num7 = scan.nextInt();
         int num8 = scan.nextInt();
@@ -70,7 +70,7 @@ public class AllHomework {
         }
     }
 
-    static void homeWork_03_06() {
+    static void quadratic() {
         Scanner scan = new Scanner(System.in);
         double a = scan.nextFloat();
         double b = scan.nextFloat();
@@ -90,7 +90,7 @@ public class AllHomework {
         }
     }
 
-    static void homeWork_03_07() {
+    static void Interval() {
         Scanner scan = new Scanner(System.in);
         int numb = scan.nextInt();
         if ((numb >= 0) && (numb <= 14)) {
@@ -106,31 +106,31 @@ public class AllHomework {
         }
     }
 
-    static void homeWork_04_01() {
+    static void fourDigitNumbers() {
         for (int numb = 1000; numb < 10000; numb += 3) {
             System.out.print(numb + " ");
         }
     }
 
-    static void homeWork_04_02() {
+    static void firstSequenceElements() {
         for (int numb = 1; numb < 57; numb += 2) {
             System.out.print(numb + " ");
         }
     }
 
-    static void homeWork_04_03() {
+    static void sequenceElements() {
         for (int value = 90; value >= 0; value -= 5) {
             System.out.print(value + " ");
         }
     }
 
-    static void homeWork_04_04() {
+    static void  first20Elements() {
         for (int a = 2; a < Math.pow(2, 21); a *= 2) {
             System.out.print(a + " ");
         }
     }
 
-    static void homeWork_04_05() {
+    static void fibonacciNumber() {
         int members = 18;
         int firstMember = 0;
         int secondMember = 1;
@@ -145,7 +145,7 @@ public class AllHomework {
         }
     }
 
-    static void homeWork_04_06() {
+    static void multisystemCalculator() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите число");
         int value = scan.nextInt();
@@ -205,7 +205,7 @@ public class AllHomework {
         }
     }
 
-    static void homeWork_04_07() {
+    static void factorial() {
         Scanner scan = new Scanner(System.in);
         int firstNum = scan.nextInt();
         int secondNum = firstNum - 1;
@@ -218,7 +218,7 @@ public class AllHomework {
         System.out.println(result);
     }
 
-    static void homeWork_04_08() {
+    static void positiveDivisors() {
         Scanner scan = new Scanner(System.in);
         int firstNum = scan.nextInt();
         int secondNum = firstNum - 1;
@@ -235,7 +235,7 @@ public class AllHomework {
         }
     }
 
-    static void homeWork_05_01() {
+    static void luckyTickets() {
         int n = 0;
         for (int i = 1; i <= 999999; i++) {
             int n1 = (i / 100000) % 10;
@@ -251,7 +251,7 @@ public class AllHomework {
         System.out.println(" Счастивых билетиков - " + n);
     }
 
-    static void homeWork_05_02() {
+    static void clock() {
         int b = 0;
         for (int i = 0; i <= 23; i++) {
             for (int j = 0; j <= 59; j++) {
@@ -269,7 +269,7 @@ public class AllHomework {
                 " симметричная комбинация для той, что справа от двоеточия ");
     }
 
-    static void homeWork_05_03() {
+    static void unluckyNumbers() {
         int b = 0;
         for (int i = 1; i <= 999999; i++) {
             int i1 = i / 100000;
