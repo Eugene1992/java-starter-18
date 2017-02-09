@@ -13,8 +13,7 @@ public class Converter {
         String op;
         int sys;
         String res = "";
-        String exit = "";
-        sys = 0;
+        String exit;
         do {
             System.out.println("Enter number");
             int n = scan.nextInt();
@@ -42,7 +41,7 @@ public class Converter {
                     break;
                 }
                 case "16": {
-                    int hex1 = 0;
+                    int hex1;
                     String hex2 = "";
                     sys = 16;
                     System.out.printf("In hexadecimal number %d = ", n);
