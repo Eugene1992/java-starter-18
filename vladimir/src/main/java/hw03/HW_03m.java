@@ -86,7 +86,8 @@ public class HW_03m {
                 default:
                     exit = 0;
             }
-        } while (exit != 0);
+        }
+        while (exit != 0);
     }
 
     static void calculator(double a, double b, String op) {
@@ -174,14 +175,10 @@ public class HW_03m {
         d = b * b - 4 * a * c;
         if (d < 0)
             System.out.println("Roots does not exist");
-        else if (d == 0)
-
-        {
+        else if (d == 0) {
             x1 = -b / (2 * a);
             System.out.printf("There are only 1 root: x1 = x2 = %f", x1);
-        } else
-
-        {
+        } else {
             x1 = (-b + Math.sqrt(d)) / (2 * a);
             x2 = (-b - Math.sqrt(d)) / (2 * a);
             System.out.printf("There are two roots: x1 = %f, x2 = %f", x1, x2);

@@ -11,10 +11,8 @@ public class Counter {
     static int myCounter(int start, int end, int step) {
         for (; start < end; start += step) {
 
-
         }
 
-
-     return start+=start;
+        return start += start;
     }
 }

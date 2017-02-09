@@ -5,18 +5,22 @@ import java.util.Scanner;
 
 public class AllHomework {
     public static void main(String[] args) {
-        homeWork_04_01();
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Choose your task:");
+        int taskNum = scan.nextInt();
+        switch (taskNum) {
+            case 1:
+                System.out.println("Enter your number:");
+                int num = scan.nextInt();
+                boolean res = isEven(num);
+                System.out.println("Selected number is " + (res ? "even" : "odd"));
+                break;
+        }
 
     }
 
-    static void homeWork_03_01() {
-        Scanner scan = new Scanner(System.in);
-        int number = scan.nextInt();
-        if (number % 2 == 0) {
-            System.out.println(" Введеное число четное ");
-        } else {
-            System.out.println(" Введенное число нечетное ");
-        }
+    static boolean isEven(int num) {
+        return num % 2 == 0;
     }
 
     static void homeWork_03_03() {
