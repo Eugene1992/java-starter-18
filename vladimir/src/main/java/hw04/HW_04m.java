@@ -14,14 +14,16 @@ public class HW_04m {
                 case 1: {
                     System.out.println("Enter the number");
                     int n = scan.nextInt();
-                    System.out.println(factorial(n));;
+                    System.out.println(factorial(n));
+                    ;
                     exit = 1;
                     break;
                 }
                 case 2: {
                     System.out.println("Enter the number");
                     int n = scan.nextInt();
-                    System.out.println(dividers(n));;
+                    System.out.println(dividers(n));
+                    ;
                     exit = 1;
                     break;
                 }
@@ -30,11 +32,11 @@ public class HW_04m {
                     int n = scan.nextInt();
                     System.out.println("Choose operation: \n2\n8\n16");
                     int op = scan.nextInt();
-                    System.out.println(converter(n,op));
+                    System.out.println(converter(n, op));
                     exit = 1;
                     break;
                 }
-                case 4:{
+                case 4: {
                     simpleCycles();
                     exit = 1;
                     break;
@@ -42,27 +44,28 @@ public class HW_04m {
                 default:
                     exit = 0;
             }
-        } while (exit != 0);
-    }
-
-    static int factorial(int n){
-        int res = 1;
-        for (int i = 1; i <=n ; i++) {
-            res *=i;
         }
-       return res;
+        while (exit != 0);
     }
 
-    static String dividers(int n){
-        String res="";
-        for (int i = 1; i <=n ; i++) {
-            if(n%i == 0)
+    static int factorial(int n) {
+        int res = 1;
+        for (int i = 1; i <= n; i++) {
+            res *= i;
+        }
+        return res;
+    }
+
+    static String dividers(int n) {
+        String res = "";
+        for (int i = 1; i <= n; i++) {
+            if (n % i == 0)
                 res += i + " ";
         }
-        return  res;
+        return res;
     }
 
-    static String converter(int n, int op){
+    static String converter(int n, int op) {
         int sys;
         String res = "";
         switch (op) {
@@ -91,31 +94,31 @@ public class HW_04m {
                 System.out.printf("In hexadecimal number %d = ", n);
                 while (n - sys >= -15) {
                     hex1 = n % sys;
-                    if(hex1 <= 9)
+                    if (hex1 <= 9)
                         res = hex1 + res;
-                    else{
-                        switch (hex1){
-                            case 10:{
+                    else {
+                        switch (hex1) {
+                            case 10: {
                                 hex2 = "A";
                                 break;
                             }
-                            case 11:{
+                            case 11: {
                                 hex2 = "B";
                                 break;
                             }
-                            case 12:{
+                            case 12: {
                                 hex2 = "C";
                                 break;
                             }
-                            case 13:{
+                            case 13: {
                                 hex2 = "D";
                                 break;
                             }
-                            case 14:{
+                            case 14: {
                                 hex2 = "E";
                                 break;
                             }
-                            case 15:{
+                            case 15: {
                                 hex2 = "F";
                                 break;
                             }
@@ -133,7 +136,7 @@ public class HW_04m {
         return res;
     }
 
-    static void simpleCycles(){
+    static void simpleCycles() {
         int i = 1000;                       //  1)
         while (i < 10000) {
             System.out.print(i + ", ");

@@ -5,21 +5,25 @@ import java.util.Scanner;
 
 public class AllHomework {
     public static void main(String[] args) {
-
-
-    }
-
-    static void parityСalculator() {
         Scanner scan = new Scanner(System.in);
-        int number = scan.nextInt();
-        if (number % 2 == 0) {
-            System.out.println(" Введеное число четное ");
-        } else {
-            System.out.println(" Введенное число нечетное ");
+        System.out.println("Choose your task:");
+        int taskNum = scan.nextInt();
+        switch (taskNum) {
+            case 1:
+                System.out.println("Enter your number:");
+                int num = scan.nextInt();
+                boolean res = isEven(num);
+                System.out.println("Selected number is " + (res ? "even" : "odd"));
+                break;
         }
+
     }
 
-    static void nearestNumber() {
+    static boolean isEven(int num) {
+        return num % 2 == 0;
+    }
+
+    static void homeWork_03_03() {
         Scanner scan = new Scanner(System.in);
         float ten = 10f;
         float number2 = scan.nextFloat();
@@ -34,7 +38,7 @@ public class AllHomework {
         }
     }
 
-    static void maxValue() {
+    static void homeWork_03_04() {
         Scanner scan = new Scanner(System.in);
         int num4 = scan.nextInt();
         int num5 = scan.nextInt();
@@ -53,7 +57,7 @@ public class AllHomework {
         }
     }
 
-    static void secondLargest() {
+    static void homeWork_03_05() {
         Scanner scan = new Scanner(System.in);
         int num7 = scan.nextInt();
         int num8 = scan.nextInt();
@@ -70,7 +74,7 @@ public class AllHomework {
         }
     }
 
-    static void quadratic() {
+    static void homeWork_03_06() {
         Scanner scan = new Scanner(System.in);
         double a = scan.nextFloat();
         double b = scan.nextFloat();
@@ -90,7 +94,7 @@ public class AllHomework {
         }
     }
 
-    static void Interval() {
+    static void homeWork_03_07() {
         Scanner scan = new Scanner(System.in);
         int numb = scan.nextInt();
         if ((numb >= 0) && (numb <= 14)) {
@@ -106,31 +110,31 @@ public class AllHomework {
         }
     }
 
-    static void fourDigitNumbers() {
+    static void homeWork_04_01() {
         for (int numb = 1000; numb < 10000; numb += 3) {
             System.out.print(numb + " ");
         }
     }
 
-    static void firstSequenceElements() {
+    static void homeWork_04_02() {
         for (int numb = 1; numb < 57; numb += 2) {
             System.out.print(numb + " ");
         }
     }
 
-    static void sequenceElements() {
+    static void homeWork_04_03() {
         for (int value = 90; value >= 0; value -= 5) {
             System.out.print(value + " ");
         }
     }
 
-    static void  first20Elements() {
+    static void homeWork_04_04() {
         for (int a = 2; a < Math.pow(2, 21); a *= 2) {
             System.out.print(a + " ");
         }
     }
 
-    static void fibonacciNumber() {
+    static void homeWork_04_05() {
         int members = 18;
         int firstMember = 0;
         int secondMember = 1;
@@ -145,7 +149,7 @@ public class AllHomework {
         }
     }
 
-    static void multisystemCalculator() {
+    static void homeWork_04_06() {
         Scanner scan = new Scanner(System.in);
         System.out.println("Введите число");
         int value = scan.nextInt();
@@ -205,7 +209,7 @@ public class AllHomework {
         }
     }
 
-    static void factorial() {
+    static void homeWork_04_07() {
         Scanner scan = new Scanner(System.in);
         int firstNum = scan.nextInt();
         int secondNum = firstNum - 1;
@@ -218,7 +222,7 @@ public class AllHomework {
         System.out.println(result);
     }
 
-    static void positiveDivisors() {
+    static void homeWork_04_08() {
         Scanner scan = new Scanner(System.in);
         int firstNum = scan.nextInt();
         int secondNum = firstNum - 1;
@@ -235,7 +239,7 @@ public class AllHomework {
         }
     }
 
-    static void luckyTickets() {
+    static void homeWork_05_01() {
         int n = 0;
         for (int i = 1; i <= 999999; i++) {
             int n1 = (i / 100000) % 10;
@@ -251,7 +255,7 @@ public class AllHomework {
         System.out.println(" Счастивых билетиков - " + n);
     }
 
-    static void clock() {
+    static void homeWork_05_02() {
         int b = 0;
         for (int i = 0; i <= 23; i++) {
             for (int j = 0; j <= 59; j++) {
@@ -269,7 +273,7 @@ public class AllHomework {
                 " симметричная комбинация для той, что справа от двоеточия ");
     }
 
-    static void unluckyNumbers() {
+    static void homeWork_05_03() {
         int b = 0;
         for (int i = 1; i <= 999999; i++) {
             int i1 = i / 100000;

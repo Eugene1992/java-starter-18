@@ -12,17 +12,17 @@ public class HW_05m {
             int task = scan.nextInt();
             switch (task) {
                 case 1: {
-                    clock();
+                    System.out.println("Number of mirror time= " + clock());
                     exit = 1;
                     break;
                 }
                 case 2:{
-                    luckytickets();
+                    System.out.println("\nNumber of lucky tickets = " + luckyTickets());
                     exit = 1;
                     break;
                 }
                 case 3:{
-                    unluckytickets();
+                    System.out.println("\nNumber of unlucky tickets = " + unluckyTickets());
                     exit = 1;
                     break;
                 }
@@ -31,7 +31,7 @@ public class HW_05m {
         }while(exit != 0);
     }
 
-    static void clock() {
+    static int clock() {
         int hour, minute, n = 0;
         for (hour = 0; hour < 24; hour++) {
             for (minute = 0; minute < 60; minute++) {
@@ -46,10 +46,10 @@ public class HW_05m {
                 }
             }
         }
-        System.out.println(n);
+        return n;
     }
 
-    static void luckytickets(){
+    static int luckyTickets(){
         int n = 0;
         for (int i = 1000; i < 1000000; i++) {
             int number1 = i / 100000;
@@ -60,13 +60,13 @@ public class HW_05m {
             int number6 = i % 10;
             if (number1 + number2 + number3 == number4 + number5 + number6) {
                 n++;
-                System.out.print(i + " ");
+                //System.out.print(i + " ");
             }
         }
-        System.out.println("\nNumber of lucky tickets = " + n);
+        return n;
     }
 
-    static void unluckytickets(){
+    static int unluckyTickets(){
         int n = 0;
         for (int i = 1000; i < 1000000; i++) {
             int number1 = i / 10000;
@@ -77,9 +77,9 @@ public class HW_05m {
             if (number1 == 13 || number2 == 13 || number3 == 13 ||
                     number4 == 13 || number5 == 13) {
                 n++;
-                System.out.print(i + " ");
+                //System.out.print(i + " ");
             }
         }
-        System.out.println("\nNumber of unlucky tickets = " + n);
+        return n;
     }
 }

@@ -8,7 +8,7 @@ package HW_05;
 public class HW5_1 {
 
     public static void main(String args[]) {
-
+        // TODO: 09.02.2017 refactor this task for method call
         int h, m, n = 0;
         for (h = 0; h < 24; h++) {
             for (m = 0; m < 60; m++) {

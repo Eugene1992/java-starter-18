@@ -5,7 +5,7 @@ package HW_05;
 
 public class HW5_2 {
     public static void main(String args []) {
-
+        // TODO: 09.02.2017 refactor this task for method call
         int tickets = 0;
         for (int a = 1; a <= 999999; a++) {
             int a1 = a / 100000;
