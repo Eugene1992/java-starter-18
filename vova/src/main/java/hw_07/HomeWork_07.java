@@ -26,7 +26,7 @@ import java.util.Arrays;
 public class HomeWork_07 {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        my6Method(array);
+        my12Method(array);
     }
 
     static void my1Method(int array[]) {
@@ -66,26 +66,94 @@ public class HomeWork_07 {
 
     static void my5Method(int array[]) {
         int sum = 0;
-        for (int i = 1; i <= array.length ; i++) {
+        for (int i = 1; i <= array.length; i++) {
             sum += i;
         }
         System.out.print(sum);
     }
 
     static void my6Method(int array[]) {
-        int sum = 0;
-        float summ  ;
+        float sum = 0;
+        float summ = 0;
         for (int i = 0; i <= array.length; i++) {
             sum += i;
-            summ = sum / array.length ;
-            System.out.println(summ);
+            summ = sum / array.length;
         }
-//        System.out.println(summ);
-
+        System.out.println(summ);
 
 
     }
+
+    static void my7Method(int array[]) {
+        int max = 0;
+        int min = 0;
+//        int min = Integer.MIN_VALUE;
+        for (int i = 0; i < array.length; ++i) {
+
+            if (array[i] < max) {
+                continue;
+            } else {
+                max = array[i];
+            }
+            if (array[i] < min) {
+                min = array[i];
+            } else {
+                continue;
+            }
+            System.out.println(max + " - max value");
+            System.out.println(min + " - min value ");
+        }
+
+
+    }
+
+    static void my8Method(int array[]) {
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 0) {
+                array[i] = 0;
+            } else {
+                continue;
+            }
+        }
+        System.out.println(Arrays.toString(array));
+    }
+
+    static void my9Method(int array[]) {////не решил пока
+        int firstNum = array[0];
+        int secondNum = array[1];
+        for (int i = 0; i < array.length; i++) {
+            firstNum = array[0];
+            secondNum = array[i + 1];
+
+        }
+    }
+
+    static void my12Method(int array[]) {
+        int firstHalf = 0;
+        int secondHalf = 0;
+        for (int i = 0; i < array.length / 2; i++) {
+         firstHalf +=array[i];
+
+        }
+        for(int i = (array.length/2 ) ; i < array.length ; i++){
+            secondHalf += array[i];
+
+        }
+
+        int firstHalfresult = (firstHalf)/(array.length/2);
+        int secondHalfresult = (secondHalf)/(array.length/2);
+        if(firstHalfresult > secondHalfresult){
+            System.out.println(firstHalfresult + " - first Half ");
+        }
+        else if (firstHalfresult < secondHalfresult){
+            System.out.println(secondHalf + " - second Half ");
+        }
+        else {
+            System.out.println(" first Half = second Half ");
+        }
+    }
 }
+
 
 
 
