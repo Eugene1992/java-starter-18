@@ -25,8 +25,8 @@ import java.util.Arrays;
  */
 public class HomeWork_07 {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        my11Method(array);
+        int[] array = {1, 2, 3, 4, 5, 9, 7, 6, 8, 10};
+        my15Method(array);
     }
 
     static void my1Method(int array[]) {
@@ -80,31 +80,22 @@ public class HomeWork_07 {
             summ = sum / array.length;
         }
         System.out.println(summ);
-
-
     }
 
     static void my7Method(int array[]) {
-        int max = 0;
-        int min = 0;
-//        int min = Integer.MIN_VALUE;
-        for (int i = 0; i < array.length; ++i) {
+        int max = array[0];
+        int min = array[0];
+        for (int i = 0; i < array.length; i++) {
 
-            if (array[i] < max) {
-                continue;
-            } else {
+            if (array[i] > max) {
                 max = array[i];
             }
             if (array[i] < min) {
                 min = array[i];
-            } else {
-                continue;
             }
-            System.out.println(max + " - max value");
-            System.out.println(min + " - min value ");
         }
-
-
+        System.out.println(max + " - max value");
+        System.out.println(min + " - min value ");
     }
 
     static void my8Method(int array[]) {
@@ -119,13 +110,37 @@ public class HomeWork_07 {
     }
 
     static void my9Method(int array[]) {////не решил пока
-        int firstNum = array[0];
-        int secondNum = array[1];
-        for (int i = 0; i < array.length; i++) {
-            firstNum = array[0];
-            secondNum = array[i + 1];
+        int numb = 0;
+        int i = 0;
+        do {
+            i++;
+            numb = i;
+            System.out.println(i + " ");
+        } while (i < array.length);
+    }
 
+    static void my10Method(int array[]) {
+        int value1 = 0;
+        int value2 = 0;
+        int max = array[0];
+        int min = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] > max) {
+                value1 = i;
+                max = array[i];
+            } else if (array[i] <= min) {
+                value2 = i;
+                min = array[i];
+            }
         }
+        for (int i = 0; i < array.length; i++) {
+            if (i == value1) {
+                array[i] = min;
+            } else if (i == value2) {
+                array[i] = max;
+            }
+        }
+        System.out.print(Arrays.toString(array));
     }
 
     static void my11Method(int array[]) {
@@ -155,6 +170,70 @@ public class HomeWork_07 {
             System.out.println(secondHalf + " - second Half ");
         } else {
             System.out.println(" first Half = second Half ");
+        }
+    }
+
+    static void my13Method(int array[]) {
+        int sum = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < 0) {
+                sum += Math.abs(array[i]);
+            }
+        }
+        System.out.println(sum * (-1));
+    }
+
+    static void my14Method(int array[]) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+            if (array[i] == 0) {
+                break;
+            }
+        }
+    }
+
+    static void my15Method(int array[]) {
+        int sum1 = array[0];
+        int sum2 = array[0];
+        int value1 = 0;
+        int value2 = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (sum1 < array[i]) {
+                value1 = i;
+                sum1 = array[i];
+            }
+            if (sum2 < (array[i] = value1)) {
+
+                sum2 = array[i];
+
+            }
+        }
+        System.out.println(" " + sum1 + " " + sum2 );
+    }
+
+    static void my18Method(int array[]) {
+        int firstFor = 0;
+        int secondFor = 0;
+        for (int i = 0; i <= array.length / 2; i++) {
+            if (array[i] > firstFor) {
+                firstFor = array[i];
+            }
+        }
+        for (int j = (array.length / 2); j < array.length; j++) {
+            if (array[j] > secondFor) {
+                secondFor = array[j];
+            }
+        }
+        if (firstFor > secondFor) {
+            for (int i = 0; i < array.length / 2; i++) {
+                System.out.print(array[i] + " ");
+            }
+        } else if (firstFor < secondFor) {
+            for (int i = (array.length / 2); i < array.length; i++) {
+                System.out.print(array[i] + " ");
+            }
+        } else {
+            System.out.println("firstFor = secondFor");
         }
     }
 }
