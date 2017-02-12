@@ -26,7 +26,7 @@ import java.util.Arrays;
 public class HomeWork_07 {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        my12Method(array);
+        my11Method(array);
     }
 
     static void my1Method(int array[]) {
@@ -128,27 +128,32 @@ public class HomeWork_07 {
         }
     }
 
+    static void my11Method(int array[]) {
+        int variable = 0;
+        for (int i = 0; i < array.length; i++) {
+            array[i] = variable;
+            array[i] = array.length - i;
+            variable = array.length - i;
+        }
+        System.out.println(Arrays.toString(array));
+    }
+
     static void my12Method(int array[]) {
         int firstHalf = 0;
         int secondHalf = 0;
         for (int i = 0; i < array.length / 2; i++) {
-         firstHalf +=array[i];
-
+            firstHalf += array[i];
         }
-        for(int i = (array.length/2 ) ; i < array.length ; i++){
+        for (int i = (array.length / 2); i < array.length; i++) {
             secondHalf += array[i];
-
         }
-
-        int firstHalfresult = (firstHalf)/(array.length/2);
-        int secondHalfresult = (secondHalf)/(array.length/2);
-        if(firstHalfresult > secondHalfresult){
+        int firstHalfresult = (firstHalf) / (array.length / 2);
+        int secondHalfresult = (secondHalf) / (array.length / 2);
+        if (firstHalfresult > secondHalfresult) {
             System.out.println(firstHalfresult + " - first Half ");
-        }
-        else if (firstHalfresult < secondHalfresult){
+        } else if (firstHalfresult < secondHalfresult) {
             System.out.println(secondHalf + " - second Half ");
-        }
-        else {
+        } else {
             System.out.println(" first Half = second Half ");
         }
     }
