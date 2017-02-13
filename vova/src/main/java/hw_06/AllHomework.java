@@ -273,7 +273,7 @@ public class AllHomework {
                 " симметричная комбинация для той, что справа от двоеточия ");
     }
 
-    static void unluckeNumbers() {
+    static void unluckyNumbers() {
         int b = 0;
         for (int i = 1; i <= 999999; i++) {
             int i1 = i / 100000;
