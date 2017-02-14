@@ -11,8 +11,11 @@ public class Ex7 {
     }
 
     static void findMinNum(int[] arr) {
-        for(int i = 0; i >= arr.length; i ++) {
-            System.out.println(i);
+        int max = 0;
+        for(int i = 0; i < arr.length; i ++) {
+            if (arr[i] > max);
+            max = arr[i];
+            System.out.println(max);
         }
     }
 }
