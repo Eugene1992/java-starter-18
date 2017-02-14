@@ -17,7 +17,7 @@ public class Arrays_hw06 {
                     System.out.println("Enter length of array");
                     int l = scan.nextInt();
                     arr = new int[l];
-                    arrayInput(l, arr);
+                    arrayInput(arr);
                     break;
                 }
                 case 2: {
@@ -30,7 +30,8 @@ public class Arrays_hw06 {
                     exit = 1;
                 }
             }
-        } while (exit != 0);
+        }
+        while (exit != 0);
         do {
             System.out.println("Choose operation:\n1) Print odd elements\n2) Reverse print\n3) Half print\n4) Reverse half print\n5) Half reverse print\n6) Summary elements of array");
             System.out.print("7) Arithmetical mean\n8) Min Max elements\n9) Change negative elements to zero\n10) Count quantity of equal elements\n11) Change min and max\n12) Sum of negative elements\n");
@@ -110,11 +111,12 @@ public class Arrays_hw06 {
                     exit = 1;
                 }
             }
-        } while (exit != 1);
+        }
+        while (exit != 1);
 
     }
 
-    static int[] arrayInput(int l, int[] arr) {
+    static int[] arrayInput(int[] arr) {
         Scanner scan = new Scanner(System.in);
         int val;
         for (int i = 0; i < arr.length; i++) {
@@ -143,7 +145,7 @@ public class Arrays_hw06 {
     }
 
     static void arrayHalfPrint(int[] arr) {
-        for (int i = 0; i <= ((arr.length - 1) / 2); i++) {
+        for (int i = 0; i <= (arr.length - 1) / 2; i++) {
             System.out.printf("Element %d  = %d\n", i, arr[i]);
         }
     }
@@ -168,24 +170,20 @@ public class Arrays_hw06 {
         return sum;
     }
 
+    /**
+     * Get minimum value of array.
+     *
+     * @param arr input array
+     * @return minimum element
+     */
     static int min(int[] arr) {
-        int min = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min = arr[i];
-            }
-        }
-        return min;
+        int minElemIndex = getMinArrayElemIndex(arr);
+        return arr[minElemIndex];
     }
 
     static int max(int[] arr) {
-        int max = arr[0];
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max) {
-                max = arr[i];
-            }
-        }
-        return max;
+        int maxElemIndex = getMaxArrayElemIndex(arr);
+        return arr[maxElemIndex];
     }
 
     static int countEqualElements(int[] arr) {
@@ -207,21 +205,12 @@ public class Arrays_hw06 {
     }
 
     static void minChangeMax(int[] arr) {
-        int max = arr[0], min = arr[0], maxI = 0, minI = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] > max) {
-                max = arr[i];
-                maxI = i;
-            }
-        }
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min = arr[i];
-                minI = i;
-            }
-        }
-        arr[minI] = max;
-        arr[maxI] = min;
+        int minIndex = getMinArrayElemIndex(arr);
+        int maxIndex = getMaxArrayElemIndex(arr);
+        int maxElem = arr[maxIndex];
+        int minElem = arr[minIndex];
+        arr[minIndex] = maxElem;
+        arr[maxIndex] = minElem;
     }
 
     static int negativeSum(int[] arr) {
@@ -234,6 +223,7 @@ public class Arrays_hw06 {
         return sum;
     }
 
+    // TODO: 14.02.2017 refactor with inner method call
     static int sumBeetwen(int[] arr) {
         int sum = 0;
         int max = arr[0], min = arr[0], maxI = 0, minI = 0;
@@ -261,6 +251,30 @@ public class Arrays_hw06 {
             }
         }
         return sum;
+    }
+
+    static int getMinArrayElemIndex(int[] arr) {
+        int min = arr[0];
+        int minIndex = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+                minIndex = i;
+            }
+        }
+        return minIndex;
+    }
+
+    static int getMaxArrayElemIndex(int[] arr) {
+        int max = arr[0];
+        int maxIndex = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] < max) {
+                max = arr[i];
+                maxIndex = i;
+            }
+        }
+        return maxIndex;
     }
 
     static int[] arrayInvertion(int[] arr) {
@@ -294,7 +308,7 @@ public class Arrays_hw06 {
         return res;
     }
 
-    static String higherArithmeticalGap(int[] arr){
+    static String higherArithmeticalGap(int[] arr) {
         String res = "", res1 = "", res2 = "";
         int sum1 = 0, sum2 = 0;
         for (int i = 0; i < arr.length / 2; i++) {
@@ -309,25 +323,25 @@ public class Arrays_hw06 {
         return res;
     }
 
-    static String beforeZero(int[] arr){
+    static String beforeZero(int[] arr) {
         String res = "";
         int indx = 0;
         for (int i = 0; i < arr.length; i++) {
-            if(arr[i] == 0){
+            if (arr[i] == 0) {
                 indx = i;
             }
         }
-        if(indx != 0){
+        if (indx != 0) {
             for (int i = 0; i < indx; i++) {
                 res = arr[i] + " " + res;
             }
-        }else{
+        } else {
             System.out.println(res = "There no elements before 0 or no zero elments!");
         }
         return res;
     }
 
-    static String beforeMin(int[] arr){
+    static String beforeMin(int[] arr) {
         String res = "";
         int minI = 0, min = arr[1];
         for (int i = 0; i < arr.length; i++) {
@@ -336,11 +350,11 @@ public class Arrays_hw06 {
                 minI = i;
             }
         }
-        if(minI == 0){
+        if (minI == 0) {
             for (int i = 0; i < minI; i++) {
                 res = arr[i] + " " + res;
             }
-        }else{
+        } else {
             System.out.println(res = "Min element stay on the first position!");
         }
         return res;
