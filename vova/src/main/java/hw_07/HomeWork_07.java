@@ -236,6 +236,14 @@ public class HomeWork_07 {
             System.out.println("firstFor = secondFor");
         }
     }
+
+//    static int my19Method(int array[],int a, int b){
+//
+//        for (int i = 0; i < array.length; i++){
+//            if()
+//
+//        }
+//    }
 }
 
 

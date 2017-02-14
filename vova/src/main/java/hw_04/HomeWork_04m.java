@@ -10,7 +10,7 @@ public class HomeWork_04m {
         System.out.println("  4)first20Elements\n  5)fibonacciNumbers\n  6)factorial\n  7)positiveDivisors ");
         int number = scan.nextInt();
 
-        switch (number){
+        switch (number) {
             case 1: {
                 System.out.println("  Программа, выводящая на экран все четырёхзначные числа последовательности 1000 1003 1006 1009 1012 1015 ...");
                 fourDigitNumber();
@@ -46,7 +46,7 @@ public class HomeWork_04m {
                 positiveDivisors();
                 break;
             }
-            default:{
+            default: {
                 break;
             }
         }
@@ -120,4 +120,4 @@ public class HomeWork_04m {
             }
         }
     }
-}
+ }
