@@ -3,17 +3,20 @@ package HW_7;
 public class Ex5 {
     public static void main(String[] args) {
         int [] array = new int[100];
-        sumCount(array);
 
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
         }
+
+        int sum = sumCount(array);
+        System.out.println(sum);
     }
-    static void sumCount(int[] array) {
+
+    static int sumCount(int[] array) {
         int sum = 0;
         for (int i = 0; i <= array.length; i++) {
             sum += i;
-            System.out.println("Total count is " + sum);
         }
+        return sum;
     }
 }

@@ -4,16 +4,17 @@ package HW_7;
 public class Ex2 {
     public static void main(String[] args) {
         int[] array = new int[100];
-        printRevArray(array);
 
         for (int i = 0; i < array.length; i++) {
             array[i] = i;
         }
+        printRevArray(array);
     }
-        static void printRevArray(int [] array) {
-            for (int i = array.length; i >= 0; i--) {
-                System.out.println(i);
-            }
+
+    static void printRevArray(int[] array) {
+        for (int i = array.length - 1; i >= 0; i--) {
+            System.out.println(array[i]);
+        }
     }
 }
 
