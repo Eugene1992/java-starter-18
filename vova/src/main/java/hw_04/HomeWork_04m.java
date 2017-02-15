@@ -9,21 +9,21 @@ public class HomeWork_04m {
         System.out.println("  Сделайте выбор:\n  1)fourDigitNumber\n  2)first55Numbers\n  3)positiveElements");
         System.out.println("  4)first20Elements\n  5)fibonacciNumbers\n  6)factorial\n  7)positiveDivisors ");
         int number = scan.nextInt();
-
+       String result = "";
         switch (number) {
             case 1: {
                 System.out.println("  Программа, выводящая на экран все четырёхзначные числа последовательности 1000 1003 1006 1009 1012 1015 ...");
-                fourDigitNumber();
+                result = fourDigitNumber();
                 break;
             }
             case 2: {
                 System.out.println("  Программа, выводящая на экран первые 55 элементов последовательности 1 3 5 7 9 11 13 15 17 …");
-                first55Numbers();
+                result = first55Numbers();
                 break;
             }
             case 3: {
                 System.out.println("  Программа, выводящая на экран все неотрицательные элементы последовательности 90 85 80 75 70 65 60 …");
-                positiveElements();
+                result = positiveElements();
                 break;
             }
             case 4: {
@@ -47,37 +47,47 @@ public class HomeWork_04m {
                 System.out.println("  Положительные делители натурального числа, введенные пользователем");
                 System.out.println("  Введите число");
                 int firstNum = scan.nextInt();
-                positiveDivisors(firstNum);
+                 positiveDivisors(firstNum);
                 break;
             }
             default: {
                 break;
             }
+
         }
+        System.out.println(result);
     }
 
-    static void fourDigitNumber() {
+    static String fourDigitNumber() {
+        String save = "";
         for (int numb = 1000; numb < 10000; numb += 3) {
-            System.out.print(numb + " ");
+            save += numb + " ";
         }
+        return save;
     }
 
-    static void first55Numbers() {
+    static String first55Numbers() {
+        String save = "";
         for (int numb = 1; numb < 57; numb += 2) {
-            System.out.print(numb + " ");
+            save += numb;
         }
+        return save;
     }
 
-    static void positiveElements() {
+    static String positiveElements() {
+        String save = "";
         for (int value = 90; value >= 0; value -= 5) {
-            System.out.print(value + " ");
+            save += value;
         }
+        return save;
     }
 
-    static void first20Elements() {
-        for (int a = 2; a < Math.pow(2, 21); a *= 2) {
-            System.out.print(a + " ");
+    static String first20Elements() {
+        String save = "";
+        for (int numb = 2; numb < Math.pow(2, 21); numb *= 2) {
+            save += numb;
         }
+        return save;
     }
 
     static void fibonacciNumbers() {
@@ -104,8 +114,8 @@ public class HomeWork_04m {
             secondNum = secondNum - 1;
             result = firstNum * secondNum;
         }
-        System.out.println(result);
-        return result;
+       return result;
+
     }
 
     static int positiveDivisors(int firstNum) {
