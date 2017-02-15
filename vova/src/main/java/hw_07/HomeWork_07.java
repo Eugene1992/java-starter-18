@@ -1,8 +1,5 @@
 package hw_07;
 
-import org.junit.Assert;
-import org.junit.Test;
-
 import java.util.Arrays;
 
 /**
@@ -29,11 +26,11 @@ import java.util.Arrays;
 public class HomeWork_07 {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 9, 7, 6, 8, 10};
-        int sum = my5Method(array);
-        System.out.println(sum);
+        replacingFirstAndSecond(array);
     }
 
-    static void my1Method(int array[]) {
+    static void pairNumbers(int array[]) {
+
         for (int i = 0; i < array.length + 1; i++) {
             if (i % 2 == 0) {
                 System.out.print(i + " ");
@@ -41,13 +38,13 @@ public class HomeWork_07 {
         }
     }
 
-    static void my2Method(int array[]) {
+    static void inverseNumbers(int array[]) {
         for (int i = array.length; i > 0; i--) {
             System.out.print(i + " ");
         }
     }
 
-    static void my3Method(int array[]) {
+    static void outputArraysParts(int array[]) {
         for (int i = 1; i <= array.length / 2; i++) {
             System.out.print(i + " ");
         }
@@ -57,7 +54,7 @@ public class HomeWork_07 {
         }
     }
 
-    static void my4Method(int array[]) {
+    static void inverseOutputArraysParts(int array[]) {
         for (int i = array.length / 2; i >= 1; i--) {
             System.out.print(i + " ");
         }
@@ -67,31 +64,25 @@ public class HomeWork_07 {
         }
     }
 
-    static int my5Method(int array[]) {
+    static void outputSumElements(int array[]) {
         int sum = 0;
         for (int i = 1; i <= array.length; i++) {
             sum += i;
         }
-        return sum;
+        System.out.print(sum);
     }
 
-    @Test
-    public void my5MethodTest() {
-        int[] array = {1, 2, 3, 4, 5};
-        final int EXPECTED = 10;
-        final int ACTUAL = my5Method(array);
-        Assert.assertEquals(EXPECTED, ACTUAL);
-    }
-
-    static double my6Method(int array[]) {
-        int sum = 0;
+    static void outputAverage(int array[]) {
+        float sum = 0;
+        float summ = 0;
         for (int i = 0; i <= array.length; i++) {
-            sum = sum + array[i];
+            sum += i;
+            summ = sum / array.length;
         }
-        return sum / array.length;
+        System.out.println(summ);
     }
 
-    static void my7Method(int array[]) {
+    static void minimumMaximumValues(int array[]) {
         int max = array[0];
         int min = array[0];
         for (int i = 0; i < array.length; i++) {
@@ -107,16 +98,18 @@ public class HomeWork_07 {
         System.out.println(min + " - min value ");
     }
 
-    static void my8Method(int array[]) {
+    static void replacedZero(int array[]) {
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
                 array[i] = 0;
+            } else {
+                continue;
             }
         }
         System.out.println(Arrays.toString(array));
     }
 
-    static void my9Method(int array[]) {////не решил пока
+    static void sameNumbers(int array[]) {////не решил пока
         int numb = 0;
         int i = 0;
         do {
@@ -126,7 +119,7 @@ public class HomeWork_07 {
         } while (i < array.length);
     }
 
-    static void my10Method(int array[]) {
+    static void placesReplacement(int array[]) {
         int value1 = 0;
         int value2 = 0;
         int max = array[0];
@@ -150,7 +143,7 @@ public class HomeWork_07 {
         System.out.print(Arrays.toString(array));
     }
 
-    static void my11Method(int array[]) {
+    static void invert(int array[]) {
         int variable = 0;
         for (int i = 0; i < array.length; i++) {
             array[i] = variable;
@@ -160,7 +153,7 @@ public class HomeWork_07 {
         System.out.println(Arrays.toString(array));
     }
 
-    static void my12Method(int array[]) {
+    static void arithmeticMeanHalf(int array[]) {
         int firstHalf = 0;
         int secondHalf = 0;
         for (int i = 0; i < array.length / 2; i++) {
@@ -180,7 +173,7 @@ public class HomeWork_07 {
         }
     }
 
-    static void my13Method(int array[]) {
+    static void sumNegativeNumbers(int array[]) {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
@@ -190,7 +183,7 @@ public class HomeWork_07 {
         System.out.println(sum * (-1));
     }
 
-    static void my14Method(int array[]) {
+    static void numberToZero(int array[]) {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
             if (array[i] == 0) {
@@ -199,7 +192,7 @@ public class HomeWork_07 {
         }
     }
 
-    static void my15Method(int array[]) {
+    static void replacingFirstAndSecond(int array[]) {
         int sum1 = array[0];
         int sum2 = array[0];
         int value1 = 0;
@@ -209,16 +202,18 @@ public class HomeWork_07 {
                 value1 = i;
                 sum1 = array[i];
             }
-            if (sum2 < (array[i] = value1)) {
-
-                sum2 = array[i];
-
-            }
         }
-        System.out.println(" " + sum1 + " " + sum2 );
+        for (int i = 0; i < value1; i++)
+            if (sum2 < array[i]) {
+                sum2 = array[i];
+                value2 = i;
+            }
+        System.out.println(value1 + " " + sum1 + " " + sum2 + "  " + value2);
+
     }
 
-    static void my18Method(int array[]) {
+
+    static void partWithMinimumNumbers(int array[]) {
         int firstFor = 0;
         int secondFor = 0;
         for (int i = 0; i <= array.length / 2; i++) {
