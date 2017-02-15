@@ -3,7 +3,7 @@ package hw_05;
 import java.util.Scanner;
 
 
-public class HW_05m {
+public class Home_05m {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("  Сделайте свой выбор : \n  1)luckyNumbers  \n  2)unluckyNumbers  \n  3)clock");

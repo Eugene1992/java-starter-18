@@ -3,7 +3,7 @@ package hw_03;
 
 import java.util.Scanner;
 
-public class Home_03M {
+public class Home_03m {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.println("  Сделайте выбор:\n  1)evenNumber\n  2)closerToTen\n  3)maxValue\n  4)value\n  5)quadraticEquation\n  6)interval");
