@@ -1,5 +1,8 @@
 package hw_07;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 import java.util.Arrays;
 
 /**
@@ -26,11 +29,11 @@ import java.util.Arrays;
 public class HomeWork_07 {
     public static void main(String[] args) {
         int[] array = {1, 2, 3, 4, 5, 9, 7, 6, 8, 10};
-        my15Method(array);
+        int sum = my5Method(array);
+        System.out.println(sum);
     }
 
     static void my1Method(int array[]) {
-
         for (int i = 0; i < array.length + 1; i++) {
             if (i % 2 == 0) {
                 System.out.print(i + " ");
@@ -64,22 +67,28 @@ public class HomeWork_07 {
         }
     }
 
-    static void my5Method(int array[]) {
+    static int my5Method(int array[]) {
         int sum = 0;
         for (int i = 1; i <= array.length; i++) {
             sum += i;
         }
-        System.out.print(sum);
+        return sum;
     }
 
-    static void my6Method(int array[]) {
-        float sum = 0;
-        float summ = 0;
+    @Test
+    public void my5MethodTest() {
+        int[] array = {1, 2, 3, 4, 5};
+        final int EXPECTED = 10;
+        final int ACTUAL = my5Method(array);
+        Assert.assertEquals(EXPECTED, ACTUAL);
+    }
+
+    static double my6Method(int array[]) {
+        int sum = 0;
         for (int i = 0; i <= array.length; i++) {
-            sum += i;
-            summ = sum / array.length;
+            sum = sum + array[i];
         }
-        System.out.println(summ);
+        return sum / array.length;
     }
 
     static void my7Method(int array[]) {
@@ -102,8 +111,6 @@ public class HomeWork_07 {
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 0) {
                 array[i] = 0;
-            } else {
-                continue;
             }
         }
         System.out.println(Arrays.toString(array));
