@@ -38,12 +38,16 @@ public class HomeWork_04m {
             }
             case 6: {
                 System.out.println("  Программа, вычисляющая факториал натурального числа n, введенного пользователем");
-                factorial();
+                System.out.println("  Введите число :");
+                int firstNum = scan.nextInt();
+                factorial(firstNum);
                 break;
             }
             case 7: {
                 System.out.println("  Положительные делители натурального числа, введенные пользователем");
-                positiveDivisors();
+                System.out.println("  Введите число");
+                int firstNum = scan.nextInt();
+                positiveDivisors(firstNum);
                 break;
             }
             default: {
@@ -91,9 +95,8 @@ public class HomeWork_04m {
         }
     }
 
-    static void factorial() {
-        Scanner scan = new Scanner(System.in);
-        int firstNum = scan.nextInt();
+    static int factorial(int firstNum) {
+
         int secondNum = firstNum - 1;
         int result = firstNum * secondNum;
         for (; secondNum > 2; firstNum--) {
@@ -102,11 +105,10 @@ public class HomeWork_04m {
             result = firstNum * secondNum;
         }
         System.out.println(result);
+        return result;
     }
 
-    static void positiveDivisors() {
-        Scanner scan = new Scanner(System.in);
-        int firstNum = scan.nextInt();
+    static int positiveDivisors(int firstNum) {
         int secondNum = firstNum - 1;
         int result = firstNum % secondNum;
         if (result == 0) {
@@ -119,5 +121,6 @@ public class HomeWork_04m {
                 System.out.println(secondNum);
             }
         }
+        return secondNum;
     }
- }
+}

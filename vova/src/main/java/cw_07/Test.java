@@ -46,7 +46,10 @@ public class Test {
         int sum = 0;
         for (int i = 0; i < array.length; i++) {
             sum += array[i];
+            i--;
+            System.out.print(i);
         }
-        System.out.print(sum);
+
+
     }
 }
