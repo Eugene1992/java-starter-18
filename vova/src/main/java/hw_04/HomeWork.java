@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 public class HomeWork {
     public static void main(String[] args) {
+
         //1.1
 //        for(int numb = 1000; numb < 10000; numb++){
 //            System.out.print(numb + " ");
