@@ -1,6 +1,5 @@
 package hw06;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -223,7 +222,6 @@ public class Arrays_hw06 {
         return sum;
     }
 
-    // TODO: 14.02.2017 refactor with inner method call
     static int sumBeetwen(int[] arr) {
         int sum = 0;
         int max = arr[0], min = arr[0], maxI = 0, minI = 0;
@@ -289,14 +287,8 @@ public class Arrays_hw06 {
 
     static String minGap(int[] arr) {
         String res = "";
-        int minI = 0, min = arr[1];
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min = arr[i];
-                minI = i;
-            }
-        }
-        if (minI >= arr.length / 2) {
+        int minIndex = getMinArrayElemIndex(arr);
+        if (minIndex >= arr.length / 2) {
             for (int i = arr.length / 2; i < arr.length; i++) {
                 res = arr[i] + " " + res;
             }
@@ -325,14 +317,14 @@ public class Arrays_hw06 {
 
     static String beforeZero(int[] arr) {
         String res = "";
-        int indx = 0;
+        int index = 0;
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == 0) {
-                indx = i;
+                index = i;
             }
         }
-        if (indx != 0) {
-            for (int i = 0; i < indx; i++) {
+        if (index != 0) {
+            for (int i = 0; i < index; i++) {
                 res = arr[i] + " " + res;
             }
         } else {
@@ -343,15 +335,9 @@ public class Arrays_hw06 {
 
     static String beforeMin(int[] arr) {
         String res = "";
-        int minI = 0, min = arr[1];
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < min) {
-                min = arr[i];
-                minI = i;
-            }
-        }
-        if (minI == 0) {
-            for (int i = 0; i < minI; i++) {
+        int minIndex = getMinArrayElemIndex(arr);
+        if (minIndex == 0) {
+            for (int i = 0; i < minIndex; i++) {
                 res = arr[i] + " " + res;
             }
         } else {
