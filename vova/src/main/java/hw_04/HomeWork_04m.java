@@ -9,7 +9,7 @@ public class HomeWork_04m {
         System.out.println("  Сделайте выбор:\n  1)fourDigitNumber\n  2)first55Numbers\n  3)positiveElements");
         System.out.println("  4)first20Elements\n  5)fibonacciNumbers\n  6)factorial\n  7)positiveDivisors ");
         int number = scan.nextInt();
-       String result = "";
+        String result = "";
         switch (number) {
             case 1: {
                 System.out.println("  Программа, выводящая на экран все четырёхзначные числа последовательности 1000 1003 1006 1009 1012 1015 ...");
@@ -47,7 +47,7 @@ public class HomeWork_04m {
                 System.out.println("  Положительные делители натурального числа, введенные пользователем");
                 System.out.println("  Введите число");
                 int firstNum = scan.nextInt();
-                 positiveDivisors(firstNum);
+                positiveDivisors(firstNum);
                 break;
             }
             default: {
@@ -114,8 +114,7 @@ public class HomeWork_04m {
             secondNum = secondNum - 1;
             result = firstNum * secondNum;
         }
-       return result;
-
+        return result;
     }
 
     static int positiveDivisors(int firstNum) {

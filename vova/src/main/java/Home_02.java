@@ -1,5 +1,5 @@
 
-public class HW_02 {
+public class Home_02 {
     public static void main(String[] args) {
 
         //дз

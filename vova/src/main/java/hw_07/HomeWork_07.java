@@ -1,6 +1,7 @@
 package hw_07;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 /**
  * 1. Вывести в консоль все парные числа одномерного массива.
@@ -25,22 +26,95 @@ import java.util.Arrays;
  */
 public class HomeWork_07 {
     public static void main(String[] args) {
-        int[] array = {1, 2, 3, 4, 5, 9, 7, 6, 8, 10};
-        replacingFirstAndSecond(array);
+        Scanner scan = new Scanner(System.in);
+        int[] array = {13, 15, 19, 5, -14, 21, 9, 11, -2, 5, 0, 2, 0};
+        System.out.println("   Выберите метод который вы хотите запустить ");
+        System.out.println("   1)pairNumbers   2)inverseNumbers   3)outputArraysParts\n   4)inverseOutputArraysParts   5)outputSumElements   6)outputAverage");
+        System.out.println("   7)minimumAndMaximumValues   8)replacedZero   9)sameNumbers\n   10)placesReplacement   11)invert   12)arithmeticMeanHalf ");
+        System.out.println("   13)sumNegativeNumbers   14)numberToZero   15)replacingFirstAndSecond\n   16)partWithMinimumNumbers");
+        int number = scan.nextInt();
+
+        switch (number) {
+            case 1: {
+                pairNumbers(array);
+                break;
+            }
+            case 2: {
+                inverseNumbers(array);
+                break;
+            }
+            case 3: {
+                outputArraysParts(array);
+                break;
+            }
+            case 4: {
+                inverseOutputArraysParts(array);
+                break;
+            }
+            case 5: {
+                System.out.print(outputSumElements(array));
+                break;
+            }
+            case 6: {
+                System.out.println(outputAverage(array));
+                break;
+            }
+            case 7: {
+                System.out.println("   Минимальное значение - " + minimumValue(array) + "\n   Максимальное значение - " + maximumValue(array));
+                break;
+
+            }
+            case 8: {
+                replacedZero(array);
+                break;
+            }
+            case 9: {
+                sameNumbers(array);
+                break;
+            }
+            case 10: {
+                placesReplacement(array);
+                break;
+            }
+            case 11: {
+                invert(array);
+                break;
+            }
+            case 12: {
+                arithmeticMeanHalf(array);
+                break;
+            }
+            case 13: {
+                sumNegativeNumbers(array);
+                break;
+            }
+            case 14: {
+                numberToZero(array);
+                break;
+            }
+            case 15: {
+                replacingFirstAndSecond(array);
+                break;
+            }
+            case 16: {
+                partWithMinimumNumbers(array);
+                break;
+            }
+        }
+
+
     }
 
     static void pairNumbers(int array[]) {
-
-        for (int i = 0; i < array.length + 1; i++) {
-            if (i % 2 == 0) {
-                System.out.print(i + " ");
+        for (int i = 0; i < array.length; i++)
+            if (array[i] % 2 == 0) {
+                System.out.println(array[i]);
             }
-        }
     }
 
     static void inverseNumbers(int array[]) {
         for (int i = array.length; i > 0; i--) {
-            System.out.print(i + " ");
+            System.out.print(array[i] + " ");
         }
     }
 
@@ -64,48 +138,50 @@ public class HomeWork_07 {
         }
     }
 
-    static void outputSumElements(int array[]) {
+    static int outputSumElements(int array[]) {
         int sum = 0;
-        for (int i = 1; i <= array.length; i++) {
+        for (int i = 0; i < array.length; i++) {
             sum += i;
         }
-        System.out.print(sum);
+        return sum;
     }
 
-    static void outputAverage(int array[]) {
+    static float outputAverage(int array[]) {
         float sum = 0;
         float summ = 0;
         for (int i = 0; i <= array.length; i++) {
             sum += i;
             summ = sum / array.length;
         }
-        System.out.println(summ);
+        return sum;
     }
 
-    static void minimumMaximumValues(int array[]) {
+    static int maximumValue(int array[]) {
         int max = array[0];
-        int min = array[0];
         for (int i = 0; i < array.length; i++) {
-
             if (array[i] > max) {
                 max = array[i];
             }
+        }
+        return max;
+    }
+
+    static int minimumValue(int array[]) {
+        int min = array[0];
+        for (int i = 0; i < array.length; i++) {
             if (array[i] < min) {
                 min = array[i];
             }
         }
-        System.out.println(max + " - max value");
-        System.out.println(min + " - min value ");
+        return min;
     }
 
     static void replacedZero(int array[]) {
         for (int i = 0; i < array.length; i++) {
-            if (array[i] < 0) {
+            if (0 > array[i]) {
                 array[i] = 0;
-            } else {
-                continue;
             }
-        }
+            }
         System.out.println(Arrays.toString(array));
     }
 
